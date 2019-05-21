@@ -11,9 +11,9 @@ To flash Jetson Developer Kit operating software:
 2. The current L4T (Tegra Linux Driver Package) provides the necessary tools to flash your developer kit. The package used was the Nvidia L4T 32.1. Generally, use the most current L4T Package provided. Download the most current package and sample file system for your Kit from the [here](https://developer.nvidia.com/linux-tegra). 
 3. Untar the files and assemble the rootfs:
 ```bash
-sudo tar xpf ${L4T_RELEASE_PACKAGE}
+sudo tar xpf ${L4T_RELEASE_PACKAGE = the L4T Package }
 cd Linux_for_Tegra/rootfs/
-sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
+sudo tar xpf ../../${SAMPLE_FS_PACKAGE = The Sample File System}
 cd ..
 sudo ./apply_binaries.sh
 ```
@@ -24,7 +24,11 @@ sudo ./flash.sh ${Your Developer Kit} mmcblk0p1
 ```
  After running flash.sh, it may display an error stating "flash.sh requires root privilege". You may have to alter the flash.sh file.
  
-In the flash.sh will check if User is root and exit if not, even if you run flash with sudo. You have to alter this line of code to allow you to run flash.sh. The code is on line 828.
+In the flash.sh will check if User is root and exit if not, even if you run flash with sudo. You have to alter this line of code to allow you to run flash.sh. The code is on line 828:
+![alt text](https://raw.githubusercontent.com/vincentcheng08/Jetson-TX2_Documentation/master/Flashsh_Error.png)
 
+## Install Jetpack for the jetson tx2
+### With Ubuntu Computer
+1. Install the 
 ## GPU Programming
  Currently, the Jetson TX2 primarily supports CUDA Toolkit that is installed with the Jetpack package. With CUDA, Jetpack include TensorRT,cuDNN(CUDA Deep Neural Network), and VisionWorks.
