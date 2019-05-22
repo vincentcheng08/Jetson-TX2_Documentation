@@ -28,7 +28,7 @@ In the flash.sh will check if User is root and exit if not, even if you run flas
 ![alt text](https://raw.githubusercontent.com/vincentcheng08/Jetson-TX2_Documentation/master/Flashsh_Error.png)
 
 ## Install Jetpack for the jetson tx2
-### With Ubuntu Computer
+### With Ubuntu 
 1. Install the SDK manager from [here](https://developer.nvidia.com/embedded/downloads) 
 2. Then run this : 
 ```bashWe
@@ -45,10 +45,12 @@ sudo apt install ./sdkmanager-[version].[build#].deb
 
 7. To install SDK input the jetson username and password.
 
-## install without Ubuntu
+## Install Jetpack 4.2 without Ubuntu 
 1. If the Jetpack has been updated, we ran sdk manager and installed the necessary tools kits deb files and repository json. The repository json explains how to install tools onto the board to run cuda and additional features.
 
-2. Here We provided the deb files for the tools provided in the jetpack 4.2 packages.
+2. We provided the deb files for the tools provided in the jetpack 4.2 packages. If you are installing Jetpack 4.2, then use the packages provided here.
+
+3. There is a bash scripts that will install all the repos onto the board. Run the bash script on your board and make sure that deb packages are in your home directory on your board.
 
 
 
