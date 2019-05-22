@@ -31,12 +31,26 @@ In the flash.sh will check if User is root and exit if not, even if you run flas
 ### With Ubuntu Computer
 1. Install the SDK manager from [here](https://developer.nvidia.com/embedded/downloads) 
 2. Then run this : 
-```bash
+```bashWe
 sudo apt install ./sdkmanager-[version].[build#].deb 
 ```
 3. Create an account with either [NVOnline](https://partners.nvidia.com/) and [Developer Zone](https://developer.nvidia.com/)
 
 4. Run the sdk manager and login with your credientials.
 ![alt text](https://raw.githubusercontent.com/vincentcheng08/Jetson-TX2_Documentation/master/sdkm-login.png)
+
+5. Then set the host machine, target Jetson board , and jetpack.
+![alt text](https://raw.githubusercontent.com/vincentcheng08/Jetson-TX2_Documentation/master/sdkm-1-jetson-target-options.png)
+6. enter sudo password to allow install.
+
+7. To install SDK input the jetson username and password.
+
+## install without Ubuntu
+1. If the Jetpack has been updated, we ran sdk manager and installed the necessary tools kits deb files and repository json. The repository json explains how to install tools onto the board to run cuda and additional features.
+
+2. Here We provided the deb files for the tools provided in the jetpack 4.2 packages.
+
+
+
 ## GPU Programming
  Currently, the Jetson TX2 primarily supports CUDA Toolkit that is installed with the Jetpack package. With CUDA, Jetpack include TensorRT,cuDNN(CUDA Deep Neural Network), and VisionWorks.
